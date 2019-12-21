@@ -15,7 +15,7 @@
   "types": "",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "keywords": [],
   "license": "MIT",
