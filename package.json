@@ -15,14 +15,14 @@
   "types": "",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
-    "prettier:": "prettier --write 'src/**/*.{js,ts}'",
+    "prettier": "prettier --write 'src/**/*.{js,ts}'",
     "prettier:check": "prettier --check 'src/**/*.{js,ts}'",
     "preversion": "npm run test",
     "version": "",
     "postversion": "",
     "prepublishOnly": "npm run test && npm run build",
     "prerelease": "git checkout master && git pull origin master && npm i && git add .",
-    "release": "standard-version -a",
+    "release": "standard-version -a --no-verify",
     "postrelease": "run-s release:*",
     "release:tags": "git push --follow-tags origin master",
     "test": "jest --passWithNoTests"
